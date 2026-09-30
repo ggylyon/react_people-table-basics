@@ -2,7 +2,7 @@ import { Link, useParams } from 'react-router-dom';
 import { Person } from '../../types';
 import { useGlobalState } from '../../store/GlobalProvider';
 
-export const PersonComponent = ({ person }: { person: Person }) => {
+export const PersonLink = ({ person }: { person: Person }) => {
   const { people } = useGlobalState();
 
   const personMother = people.find(

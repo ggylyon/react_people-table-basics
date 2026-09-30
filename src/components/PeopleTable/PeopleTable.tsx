@@ -1,5 +1,5 @@
 import { useGlobalState } from '../../store/GlobalProvider';
-import { PersonComponent } from '../PersonComponent/PersonComponent';
+import { PersonLink } from '../PersonLink/PersonLink';
 
 export const PeopleTable = () => {
   const { people } = useGlobalState();
@@ -22,7 +22,7 @@ export const PeopleTable = () => {
 
       <tbody>
         {people.map(person => {
-          return <PersonComponent person={person} key={person.slug} />;
+          return <PersonLink person={person} key={person.slug} />;
         })}
       </tbody>
     </table>
